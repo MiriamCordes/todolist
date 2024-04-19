@@ -1,4 +1,4 @@
-package com.mc.todolist.ui.theme
+package com.mc.todolist.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
