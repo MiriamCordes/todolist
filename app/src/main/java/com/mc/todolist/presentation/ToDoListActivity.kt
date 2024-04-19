@@ -7,19 +7,14 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
+import com.mc.todolist.presentation.todolist.ToDoList
 import com.mc.todolist.presentation.ui.theme.TodolistTheme
 
 class ToDoListActivity : ComponentActivity() {
    override fun onCreate(savedInstanceState: Bundle?) {
       super.onCreate(savedInstanceState)
       setContent {
-         TodolistTheme {
-            Surface(
-               modifier = Modifier.fillMaxSize(),
-               color = MaterialTheme.colorScheme.background
-            ) {
-            }
-         }
+         ToDoList()
       }
    }
 }
