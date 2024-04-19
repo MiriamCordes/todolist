@@ -7,6 +7,6 @@ import org.koin.dsl.module
 
 val toDoListModule =
    module {
-      viewModel { get<ToDoListViewModel>() }
-      viewModel { get<ToDoListItemViewModel>() }
+      viewModel { ToDoListViewModel() }
+      viewModel { ToDoListItemViewModel() }
    }
