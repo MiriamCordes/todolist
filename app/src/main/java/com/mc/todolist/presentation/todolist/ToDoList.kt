@@ -16,9 +16,10 @@ fun ToDoList(
 ) {
    // TODO move to ViewModel
    // TODO use real data
-   val list = rememberSaveable {
-      mutableListOf("todo 1", "todo 2", "todo3")
-   }
+   val list =
+      rememberSaveable {
+         mutableListOf("todo 1", "todo 2", "todo3")
+      }
    LazyColumn(modifier = modifier) {
       itemsIndexed(list) { index, label ->
          ToDoListItem(

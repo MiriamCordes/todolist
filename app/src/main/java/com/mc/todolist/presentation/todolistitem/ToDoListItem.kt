@@ -20,9 +20,11 @@ fun ToDoListItem(
    modifier: Modifier = Modifier
 ) {
    Row(
-      modifier = modifier
-         .fillMaxWidth()
-         .padding(start = 16.dp, end = 16.dp), horizontalArrangement = Arrangement.SpaceBetween
+      modifier =
+         modifier
+            .fillMaxWidth()
+            .padding(start = 16.dp, end = 16.dp),
+      horizontalArrangement = Arrangement.SpaceBetween
    ) {
       Text(text = itemModel.label, modifier = Modifier.align(Alignment.CenterVertically))
       // TODO handle onCheckedChange
