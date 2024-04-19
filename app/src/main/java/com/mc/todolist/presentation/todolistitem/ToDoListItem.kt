@@ -9,5 +9,4 @@ fun ToDoListItem(
    viewModel: ToDoListItemViewModel = koinViewModel(),
    modififer: Modifier = Modifier
 ) {
-
 }
