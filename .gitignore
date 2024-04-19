@@ -1,15 +1,22 @@
-*.iml
-.gradle
+# Generated files
+bin/
+gen/
+out/
+build/
+
+# Local.properties file (SDK path, local configurations)
 /local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
-/build
+
+# Gradle specific files
+.gradle
+
+# Android Studio specific files
+*.iml
+.idea/*
 /captures
+
+# NDK
 .externalNativeBuild
-.cxx
-local.properties
+
+# OS specific files
+.DS_Store
