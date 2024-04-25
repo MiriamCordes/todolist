@@ -1,8 +1,12 @@
 package com.mc.todolist.presentation.koin
 
 import androidx.room.Room
+import com.mc.todolist.data.ToDoListRepositoryImpl
 import com.mc.todolist.data.database.ToDoListDao
 import com.mc.todolist.data.database.ToDoListDatabase
+import com.mc.todolist.domain.AddToDoListItemUseCase
+import com.mc.todolist.domain.GetToDoListUseCase
+import com.mc.todolist.domain.ToDoListRepository
 import com.mc.todolist.presentation.donelist.DoneListViewModel
 import com.mc.todolist.presentation.todolist.ToDoListViewModel
 import com.mc.todolist.presentation.todolistitem.ToDoListItemViewModel
@@ -29,6 +33,14 @@ val toDoListModule =
       }
 
       viewModel { ToDoListViewModel() }
+
       viewModel { ToDoListItemViewModel() }
+
       viewModel { DoneListViewModel() }
+
+      single<ToDoListRepository> { ToDoListRepositoryImpl() }
+
+      single { GetToDoListUseCase(get()) }
+
+      single { AddToDoListItemUseCase(get()) }
    }
